@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from supabase import create_client, Client
+from supabase import create_client, Client, ClientOptions
 from dotenv import load_dotenv
 import os
 
@@ -7,8 +7,10 @@ load_dotenv()
 url: str = os.getenv("SUPABASE_URL")
 key: str = os.getenv("SUPABASE_KEY")
 
-supabase: Client = create_client(url, key)
+options = ClientOptions(auto_refresh_token=False)
 
+# Disable auto refresh
+supabase: Client = create_client(url, key, options)
 
 app = FastAPI()
 

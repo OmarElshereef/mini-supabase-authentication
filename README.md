@@ -1,6 +1,16 @@
 # mini-supabase-authentication
 
-this is a minimal implementaion of supabase authentication service.
+A minimal FastAPI implementation demonstrating custom token management with Supabase authentication, bypassing the automatic token refresh mechanism for manual control.
+
+## Overview
+
+This project showcases how to implement custom token refresh logic in a FastAPI application using Supabase authentication. By disabling the automatic token refresh feature, developers gain full control over when and how authentication tokens are refreshed, enabling custom authentication flows and better integration with existing systems.
+
+## Features
+
+- Manual Token Management: Disable automatic token refresh for precise contro
+
+- Custom Refresh Endpoint: Implement your own token refresh logic
 
 ## Requirements
 
